@@ -1,6 +1,10 @@
+// import { useState } from 'react'
 import '../components/styles/Navbar.css'
 
-function Navbar(){
+function Navbar({ select, updateSelect }){
+
+	console.log(select) 
+
 	return(
 		<div className='tst-nav-cover'>
 			<div className='tst-nav-container'>
@@ -8,7 +12,7 @@ function Navbar(){
 					<p>Rechercher</p>
 				</div>
 				<div className='tst-nav-item'>
-					<p>Mes selections</p>
+					<p>Mes selections ({select})</p>
 				</div>
 				<div className='tst-nav-gardient'></div>
 			</div>

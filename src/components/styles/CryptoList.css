@@ -3,7 +3,7 @@
 	padding-top: 50px;
 }
 
-.tst-crypto-ul{	
+/*.tst-crypto-ul{	
 	width: 400px;
     font-size: 20px;
     align-items: center;
@@ -30,7 +30,7 @@
 .tst-crypto-li:hover, .tst-crypto-li.active {
 	background-color: #27345E;
 	color: white;
-}
+}*/
 
 .tst-crypto-item{
 	display: flex;

@@ -5,9 +5,14 @@
 	margin: 30px;
 	border-radius: 12px;
 	padding: 20px;
+	cursor: pointer;
 }
 
-.tst-crypto-item-container:hover, .tst-crypto-item-container.active{
+.tst-crypto-item-container:hover{
+	opacity: 1!important;
+}
+
+.tst-crypto-item-container.active{
 	background-color: black!important;
 }
 

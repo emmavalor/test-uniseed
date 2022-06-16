@@ -7,10 +7,11 @@ function CryptoItem({ id, name, categorie, commentaire, color, textColor }){
 
 	const colorBg = color === 'rgb(152, 225, 186)' ? 'rgba(152, 225, 186, 0.5)' : color
 
-	const [isActive, setActive] = useState(false);
+	const [isActive, setIsActive] = useState(false);
+
 
     const toggleClass = () => {
-        setActive(!isActive);
+        setIsActive(!isActive);
     };
 
 	return (
@@ -21,5 +22,6 @@ function CryptoItem({ id, name, categorie, commentaire, color, textColor }){
         </li>
         )
 }
+
 
 export default CryptoItem

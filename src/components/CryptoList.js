@@ -1,10 +1,13 @@
 import { cryptoList } from '../datas/cryptoList'
 import '../components/styles/CryptoList.css'
 import CryptoItem from './CryptoItem'
-import React, { useState } from 'react'
+import Category from './Category'
+import { useState } from 'react'
 
-function CryptoList() {
+function CryptoList({ select, updateSelect }) {
     // je trie les categories pour pas qu'il y est de doublons
+    const [activeCategory, setActiveCategory] = useState('')
+
     const categories = cryptoList.reduce(
         (acc, crypto) =>
             acc.includes(crypto.categorie) ? acc : acc.concat(crypto.categorie),
@@ -12,35 +15,39 @@ function CryptoList() {
     )
 
     // je regarde l'etat de ma classe
-    const [isActive, setActive] = useState(false);
+    // const [isActive, setActive] = useState(false);
 
-    const toggleClass = () => {
-        setActive(!isActive);
-    };
-
-    // je filtre pour garder que les crypto qui sont en adequations avec ma categorie
-    const filterItem = () => {
-
-    }
-
+    // const toggleClass = () => {
+    //     setActive(!isActive);
+    // };
 
     return (
         <div className='tst-crypto-list'>
-            <ul className='tst-crypto-ul'>
-                {categories.map((cat) => (
-                    <li key={cat} data-target={cat} className={isActive ? 'tst-crypto-li active' : 'tst-crypto-li'} onClick={toggleClass}>Risque {cat}</li>
-                ))}
-            </ul>
+            <Category
+                categories={categories}
+                setActiveCategory={setActiveCategory}
+                activeCategory={activeCategory}
+            />
+            {/*<ul className='tst-crypto-ul'>
+                            {categories.map((cat) => (
+                                <li key={cat} className={isActive ? 'tst-crypto-li active' : 'tst-crypto-li'} onClick={toggleClass}>Risque {cat}</li>
+                            ))}
+                        </ul>*/}
             <ul className='tst-crypto-item'>
                 {cryptoList.map(({ id, name, categorie, commentaire, color, textColor }) => (
-                    <CryptoItem
-                        id={id}
-                        categorie={categorie}
-                        name={name}
-                        commentaire={commentaire}
-                        color={color}
-                        textColor={textColor}
-                    />
+                    !activeCategory || activeCategory === categorie ? (
+                    <div key={id}>
+                        <CryptoItem
+                            id={id}
+                            categorie={categorie}
+                            name={name}
+                            commentaire={commentaire}
+                            color={color}
+                            textColor={textColor}
+                        />
+                        <button onClick={() => updateSelect(select + 1)}>Ajouter</button>
+                    </div>
+                    ) : null
                 ))}
             </ul>
         </div>
@@ -48,3 +55,9 @@ function CryptoList() {
 }
 
 export default CryptoList
+
+
+
+
+
+

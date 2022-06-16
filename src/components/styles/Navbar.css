@@ -1,5 +1,6 @@
 .tst-nav-cover{
 	position: fixed;
+	top: 90px;
 	background-color: black;
 	width: 230px;
 	height: 900px;

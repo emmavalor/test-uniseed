@@ -3,20 +3,16 @@ import React, { useState } from 'react'
 
 function Banner(){
 
-	const [isActive, setActive] = useState(false);
-
-	const toggleClass = () => {
-		setActive(!isActive);
-	};
+	const [isActive, setIsActive] = useState(false);
 
 	return (
 		<div>
-			<div className='tst-banner-cover' onClick={toggleClass}> 
+			<div className='tst-banner-cover' onClick={() => setIsActive(true)}> 
 				<div className='tst-banner-hello'>Hello</div>
 			</div>
 			<div className={isActive ? 'tst-banner-grey-bg' : null}>
 				<span>Hello crypto</span>
-				<span onClick={toggleClass}>close</span>
+				<span onClick={() => setIsActive(false)}>close</span>
 			</div>
 		</div>
 		)
