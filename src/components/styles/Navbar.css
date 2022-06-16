@@ -11,7 +11,16 @@
 }
 
 .tst-nav-item{
+	padding-left: 20px;
 	color: #969BA0;
+	height: 50px;
+	line-height: 50px;
+	font-weight: bold;
+}
+
+.tst-nav-item:hover{
+	background-color: #FFFFFF;
+	color: #D3B23B;
 }
 
 .tst-nav-gardient{
