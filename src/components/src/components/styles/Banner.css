@@ -1,0 +1,45 @@
+.tst-banner-cover{
+	top: 0;
+	position: fixed;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	background-color: black;
+	height: 90px;
+	width: 100%;
+}
+
+.tst-banner-hello{
+	background-color: #D3B23B;
+	width: 155px;
+	height: 42px;
+	border-radius: 6px;
+	text-align: center;
+	line-height: 40px;
+	margin-right: 30px;
+	cursor: pointer;
+}
+
+.tst-banner-grey-bg{
+	line-height: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	position: fixed;
+	margin-left: 230px;
+	margin-top: 90px;
+	width: calc(100% - 230px);
+	height: 30px;
+	background-color: #D9D9D9;
+}
+
+.tst-banner-grey-bg.active{
+	display: none;
+}
+
+.tst-banner-grey-bg span:nth-child(2){
+	cursor: pointer;
+	text-decoration: underline;
+}
+ 
+

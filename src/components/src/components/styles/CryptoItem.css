@@ -1,0 +1,41 @@
+.tst-crypto-item-container{
+	width: 200px;
+	height: 190px;
+	list-style-type: none;
+	margin: 30px;
+	border-radius: 12px;
+	padding: 20px;
+	cursor: pointer;
+}
+
+.tst-crypto-item-container:hover{
+	opacity: 1!important;
+}
+
+.tst-crypto-item-container.active{
+	background-color: black!important;
+}
+
+.tst-crypto-item-container div{
+	margin: 25px 0;
+}
+
+.tst-crypto-item-cat{
+	font-size: 12px;
+	line-height: 20px;
+	width: 50px;
+	height: 20px;
+	padding: 5px 8px;
+	border-radius: 4px;
+	text-align: center;
+	color: white;
+}
+
+.tst-crypto-item-name{
+	font-weight: bold;
+}
+
+.tst-crypto-item-com{
+	padding-top: 20px;
+	font-size: 14px;
+}
