@@ -15,7 +15,11 @@ function CryptoItem({ id, name, categorie, commentaire, color, textColor }){
     };
 
 	return (
-		<li key={id} className={isActive ? 'tst-crypto-item-container active' : 'tst-crypto-item-container'} onClick={toggleClass} style={{backgroundColor: colorBg}}>
+		<li key={id} 
+			className={isActive ? 'tst-crypto-item-container active' : 'tst-crypto-item-container'} 
+			onClick={toggleClass} 
+			style={{backgroundColor: colorBg}}
+		>
 			<div className='tst-crypto-item-cat' style={{backgroundColor: textColor}}>{categorie.toUpperCase()}</div>
 			<div className='tst-crypto-item-name' style={{color: textColor}}>{name.charAt(0).toUpperCase() + name.substring(1).toLowerCase()}</div>
 			<div className='tst-crypto-item-com' style={{color: textColor}}>{commentaire}</div>

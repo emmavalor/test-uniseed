@@ -1,3 +1,7 @@
+a{
+	text-decoration: none;
+}
+
 .tst-nav-cover{
 	position: fixed;
 	top: 90px;
@@ -7,10 +11,10 @@
 }
 
 .tst-nav-container{
-	margin-top: 200px;
+	margin-top: 30px;
 }
 
-.tst-nav-item{
+.tst-nav-item, .tst-nav-item a p{
 	padding-left: 20px;
 	color: #969BA0;
 	height: 50px;
@@ -18,7 +22,7 @@
 	font-weight: bold;
 }
 
-.tst-nav-item:hover{
+.tst-nav-item.active{
 	background-color: #FFFFFF;
 	color: #D3B23B;
 }

@@ -1,6 +1,6 @@
 export const cryptoList = [
 	{
-		name: 'bitcoin',
+		name: 'bitcoin1',
 		categorie: 'faible',
 		id: '1ed',
 		commentaire: 'Le bitcoin est une crypto etc.....',
@@ -8,7 +8,7 @@ export const cryptoList = [
 		textColor: '#4BC583'
 	},
 	{
-		name: 'dodgecoin',
+		name: 'dodgecoin1',
 		categorie: 'moyen',
 		id: '2ab',
 		commentaire:'Le dodgecoin....',
@@ -16,7 +16,7 @@ export const cryptoList = [
 		textColor: '#CAA682'
 	},
 	{
-		name: 'ethereum',
+		name: 'ethereum1',
 		categorie: 'moyen',
 		id: '3sd',
 		commentaire:'L’ethereuem....',
@@ -24,7 +24,7 @@ export const cryptoList = [
 		textColor: '#CAA682'
 	},
 	{
-		name: 'solana',
+		name: 'solana1',
 		categorie: 'élevé',
 		id: '4kk',
 		commentaire:'Le solana....',
@@ -32,7 +32,7 @@ export const cryptoList = [
 		textColor: '#F28C8C'
 	},
 	{
-		name: 'bitcoin',
+		name: 'bitcoin2',
 		categorie: 'faible',
 		id: '5fd',
 		commentaire: 'Le bitcoin est une crypto etc.....',
@@ -40,7 +40,7 @@ export const cryptoList = [
 		textColor: '#4BC583'
 	},
 	{
-		name: 'dodgecoin',
+		name: 'dodgecoin2',
 		categorie: 'moyen',
 		id: '6fb',
 		commentaire:'Le dodgecoin....',
@@ -48,7 +48,7 @@ export const cryptoList = [
 		textColor: '#CAA682'
 	},
 	{
-		name: 'ethereum',
+		name: 'ethereum2',
 		categorie: 'moyen',
 		id: '7od',
 		commentaire:'L’ethereuem....',
@@ -56,7 +56,7 @@ export const cryptoList = [
 		textColor: '#CAA682'
 	},
 	{
-		name: 'solana',
+		name: 'solana2',
 		categorie: 'élevé',
 		id: '8lk',
 		commentaire:'Le solana....',
@@ -64,7 +64,7 @@ export const cryptoList = [
 		textColor: '#F28C8C'
 	},
 	{
-		name: 'bitcoin',
+		name: 'bitcoin3',
 		categorie: 'faible',
 		id: '9hd',
 		commentaire: 'Le bitcoin est une crypto etc.....',
@@ -72,7 +72,7 @@ export const cryptoList = [
 		textColor: '#4BC583'
 	},
 	{
-		name: 'dodgecoin',
+		name: 'dodgecoin3',
 		categorie: 'moyen',
 		id: '10nb',
 		commentaire:'Le dodgecoin....',
@@ -80,7 +80,7 @@ export const cryptoList = [
 		textColor: '#CAA682'
 	},
 	{
-		name: 'ethereum',
+		name: 'ethereum3',
 		categorie: 'moyen',
 		id: '11bd',
 		commentaire:'L’ethereuem....',
@@ -88,7 +88,7 @@ export const cryptoList = [
 		textColor: '#CAA682'
 	},
 	{
-		name: 'solana',
+		name: 'solana3',
 		categorie: 'élevé',
 		id: '12zk',
 		commentaire:'Le solana....',

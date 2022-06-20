@@ -3,6 +3,20 @@
 	padding-top: 50px;
 }
 
+.tst-crypto-list-btn{
+	display: block;
+	color: #000000;
+	background-color: #D3B23B;
+	border: none;
+	font-size: 14px;
+	border-radius: 6px;
+	width: 140px;
+	height: 50px;
+	line-height: 50px;
+	cursor: pointer;
+	margin: 60px auto 0;
+}
+
 /*.tst-crypto-ul{	
 	width: 400px;
     font-size: 20px;
@@ -33,7 +47,29 @@
 }*/
 
 .tst-crypto-item{
+	margin-top: 0;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
+}
+
+.tst-crypto-item-detail{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tst-crypto-item-div-btn{
+	text-align: center;
+    width: 200px;
+}
+
+.tst-crypto-item-btn{
+	color: white;
+	margin: 0 15px;
+	border: none;
+	font-size: 14px;
+	border-radius: 6px;
+	height: 40px;
+	cursor: pointer;
 }

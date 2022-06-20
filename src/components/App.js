@@ -8,16 +8,14 @@ import { useState } from 'react'
 
 function App() {
 
-  const [select, updateSelect] = useState(0)
-
-  console.log(select)
-
+    const [validate, updateValidate] = useState([])
+  const [select, updateSelect] = useState([])
 
   return (
     <div>
       <Banner />
       <Title />
-      <Navbar select={select} updateSelect={updateSelect} />
+      <Navbar select={select} updateSelect={updateSelect} validate={validate} updateValidate={updateValidate} />
       <CryptoList select={select} updateSelect={updateSelect} />
     </div>
   )

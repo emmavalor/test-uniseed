@@ -18,10 +18,10 @@ function Categories({ setActiveCategory, categories, activeCategory }) {
 				onChange={(e) => setActiveCategory(e.target.value)}
 				className='lmj-categories-select'
 			>
-				<option value=''> Filtrer par catégorie</option>
+				<option value=''> Filtrer par risque</option>
 				{categories.map((cat) => (
 					<option key={cat} value={cat}>
-						{cat}
+						Risque {cat}
 					</option>
 				))}
 			</select>
@@ -37,3 +37,5 @@ export default Categories
 //                     <li key={cat} className={isActive ? 'tst-categories-li active' : 'tst-categories-li'} onClick={toggleClass}>Risque {cat}</li>
 //                 ))}
 //             </ul>
+
+
