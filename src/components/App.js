@@ -8,7 +8,12 @@ import { useState } from 'react'
 
 function App() {
 
-    const [validate, updateValidate] = useState([])
+  // ici j'utilise le useState pour definir des tableaux vides
+
+  // validate recupere ma selection 
+  const [validate, updateValidate] = useState([])
+
+  // select recupere les cartes selectionnées
   const [select, updateSelect] = useState([])
 
   return (

@@ -1,10 +1,12 @@
 // import { useState } from 'react'
 // import Selection from './Selection'
-import { Navigate } from "react-router-dom"
+// import { Navigate } from "react-router-dom"
 import '../components/styles/Navbar.css'
 
 function Navbar({ select, updateSelect, validate, updateValidate }){
 
+	// y a quelques chose qui doit pas aller parce que mon validate ne recupere aucunes valeurs alors que mon select oui 
+	console.log(select)
 	console.log(validate)
 
 	return(

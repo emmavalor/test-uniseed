@@ -7,9 +7,8 @@ function CryptoItem({ id, name, categorie, commentaire, color, textColor }){
 
 	const colorBg = color === 'rgb(152, 225, 186)' ? 'rgba(152, 225, 186, 0.5)' : color
 
+	// ici mon useState + la fonction qui me permet de changer ma class CSS
 	const [isActive, setIsActive] = useState(false);
-
-
     const toggleClass = () => {
         setIsActive(!isActive);
     };
@@ -17,6 +16,7 @@ function CryptoItem({ id, name, categorie, commentaire, color, textColor }){
 	return (
 		<li key={id} 
 			className={isActive ? 'tst-crypto-item-container active' : 'tst-crypto-item-container'} 
+			/*ici mon onClick pour ma classe CSS*/
 			onClick={toggleClass} 
 			style={{backgroundColor: colorBg}}
 		>
@@ -29,3 +29,4 @@ function CryptoItem({ id, name, categorie, commentaire, color, textColor }){
 
 
 export default CryptoItem
+

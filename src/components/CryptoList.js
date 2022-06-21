@@ -5,7 +5,6 @@ import Category from './Category'
 import { useState, useEffect } from 'react'
 
 function CryptoList({ select, updateSelect, color }) {
-    // je trie les categories pour pas qu'il y est de doublons
     const [activeCategory, setActiveCategory] = useState('')
     const [validate, updateValidate] = useState([])
 
@@ -15,14 +14,16 @@ function CryptoList({ select, updateSelect, color }) {
         []
     )
 
+    // ici mon validate a bien une valeur : un tableau qui recap les cryptos ajoutées
     console.log(validate)
 
-    // je regarde l'etat de ma classe
     // const [isActive, setActive] = useState(false);
 
     // const toggleClass = () => {
     //     setActive(!isActive);
     // };
+
+    // fonction pour ajouter les crypto aux select qui ajout 1 en amount si la crypto a deja ete selectionne, sinon il rajoute la crypto au tabelau 
     function addToSelect(name, categorie) {
         const currentCryptoAdded = select.find((crypto)=> crypto.name === name)
         var date = new Date();
@@ -40,19 +41,6 @@ function CryptoList({ select, updateSelect, color }) {
         }
     }
 
-    function addToValidate(name, categorie) {
-        if(validate === [1]){
-            updateValidate([])
-        }
-        updateValidate(select)
-    }
-
-    // useEffect(() => {
-    //     updateSelect([])
-    // }, [])
-
-    // console.log(select)
-
     return (
         <div className='tst-crypto-list'>
             <Category
@@ -60,13 +48,15 @@ function CryptoList({ select, updateSelect, color }) {
                 setActiveCategory={setActiveCategory}
                 activeCategory={activeCategory}
             />
-            <button className='tst-crypto-list-btn' onClick={addToValidate}>Valider la selection</button>
+        {/* quand je clique, validate devient un tableau avec les valeurs de selct */}
+            <button className='tst-crypto-list-btn' onClick={() => updateValidate(select)}>Valider la selection</button>
 
             {/*<ul className='tst-crypto-ul'>
                             {categories.map((cat) => (
                                 <li key={cat} className={isActive ? 'tst-crypto-li active' : 'tst-crypto-li'} onClick={toggleClass}>Risque {cat}</li>
                             ))}
                         </ul>*/}
+
             <ul className='tst-crypto-item'>
                 {cryptoList.map(({ id, name, categorie, commentaire, color, textColor }) => (
                     !activeCategory || activeCategory === categorie ? (
@@ -79,6 +69,8 @@ function CryptoList({ select, updateSelect, color }) {
                             color={color}
                             textColor={textColor}
                         />
+
+                    {/*j'arrivais pas a updateSelect sur CryptoItem.js alors j'ai ajouté un button la*/}
                         <div className='tst-crypto-item-div-btn'>
                         <button onClick={() => addToSelect(name, categorie)} className='tst-crypto-item-btn' style={{backgroundColor: textColor}}>Ajouter</button>
                         </div>
